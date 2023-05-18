@@ -346,7 +346,7 @@ void MENU_1(){
 	
 	scanf("%i", &escolha);
 	if (escolha == 1){
-		MAP_2();
+		MAP_1();
 	}
 	if (escolha == 2){
 		TUTORIAL();
