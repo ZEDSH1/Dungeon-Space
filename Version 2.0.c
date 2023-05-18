@@ -55,8 +55,10 @@ char map_1[MAP_1_HEIGHT][MAP_1_WIDTH] = {
 };
 
 void DRAW_MAP_1() {
-    for (int y = 0; y < MAP_1_HEIGHT; y++) {
-        for (int x = 0; x < MAP_1_WIDTH; x++) {
+	int y;
+	int x;
+    for (y = 0; y < MAP_1_HEIGHT; y++) {
+        for (x = 0; x < MAP_1_WIDTH; x++) {
             if (x == player_x && y == player_y) {
                 printf("& ");
             } else {
@@ -166,8 +168,10 @@ char map_2[MAP_2_HEIGHT][MAP_2_WIDTH] = {
 };
 
 void DRAW_MAP_2() {
-    for (int y = 0; y < MAP_2_HEIGHT; y++) {
-        for (int x = 0; x < MAP_2_WIDTH; x++) {
+	int y;
+	int x;
+    for (y = 0; y < MAP_2_HEIGHT; y++) {
+        for (x = 0; x < MAP_2_WIDTH; x++) {
             if (x == player_x && y == player_y) {
                 printf("& ");
             } else {
@@ -314,7 +318,7 @@ void TUTORIAL(){
 	printf("     tres vezes, o jogo volta para o menu principal.\n\n");
 	printf("     >: Simbolo que representa um teletransporte. O teletransporte sempre deve vir em pares, quando o jogador toca em um ele\n");
 	printf("     eh transportado para o outro e vice-versa.\n\n");
-	printf("     ¬: Simbolo que representa o monstro nivel 1. O mostro tem um movimento aleatorio, logo, ele movimenta um bloco para\n");
+	printf("     Â¬: Simbolo que representa o monstro nivel 1. O mostro tem um movimento aleatorio, logo, ele movimenta um bloco para\n");
 	printf("     cima ou para direita ou para esquerda ou para baixo. O monstro sempre faz uma movimentacao depois do usuario se\n");
 	printf("     movimentar ou interagir com um objeto.\n\n");
 	printf("     K: Simbolo que representa o monstro nivel 2. O mostro nivel dois tem uma inteligencia de se movimentar na direcao do\n");
