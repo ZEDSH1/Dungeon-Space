@@ -116,17 +116,13 @@ void MAP_1() {
                     printf("=========================\n// Voce pegou a chave! //\n========================="); delay(1);
                     
                 }
-				    /*else if (map_1[player_y][player_x] == '#'){
-                	vida = vida - 1;
-				}*/ else if (map_1[player_y][player_x] == 'D' && has_key) {
+				     else if (map_1[player_y][player_x] == 'D' && has_key) {
                     map_1[player_y][player_x] = '=';
                     printf("=========================\n// Voce abriu a porta! //\n========================="); delay(1);
                     printf("\n");
                     printf("=======================\n// Ande para avancar //\n======================="); delay(2);
 				}
-				/*else if (map_1[player_y][player_x] == '=') {
-                    MAP_2();
-				}*/
+				
                 break;
         }
     }
@@ -188,6 +184,7 @@ void DRAW_MAP_2() {
 
 					printf("Voce so tinha um trabalho...\nSO UM!!!\n\n"); delay(2);
 					printf("Retornando pro menu..."); delay(2);
+					vida = vida + 3; 
 
 					MENU_1();
 				}
