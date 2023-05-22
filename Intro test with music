@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <windows.h> // Para reprodução de som no Windows
+
+// Definição das notas musicais
+#define C 523
+#define D 587
+#define D_SHARP 622
+#define F_SHARP 739
+#define G 784
+#define G_SHARP 830
+#define A_SHARP 932
+
+// Definição das durações das notas
+#define HALF 500
+#define QUARTER 250
+#define EIGHTH 125
+#define SIXTEENTH 63
+
+// Função para reproduzir uma nota
+void playTone(int frequency, int duration) {
+    Beep(frequency, duration);
+}
+
+// Função para reproduzir 
+void playDarkIntroTheme() {
+    // Notas do tema 
+    int DarkIntroTheme[] = { D_SHARP, F_SHARP, G_SHARP, D_SHARP, A_SHARP, G_SHARP, F_SHARP, D_SHARP,
+                              F_SHARP, G_SHARP, A_SHARP, F_SHARP, D_SHARP, G, F_SHARP, D_SHARP };
+
+    // Durações das notas correspondentes
+    int NoteDurations[] = { EIGHTH, QUARTER, QUARTER, QUARTER, HALF, EIGHTH, QUARTER, QUARTER,
+                            QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, HALF };
+
+    // Reproduz as notas uma a uma
+    int NumNotes = sizeof(DarkIntroTheme) / sizeof(DarkIntroTheme[0]);
+    for (int i = 0; i < NumNotes; i++) {
+        playTone(DarkIntroTheme[i], NoteDurations[i]);
+        Sleep(50); // Pausa entre as notas
+    }
+}
+
+int main() {
+    printf(" ______            _        _______  _______  _______  _          _______  _______  _______  _______  _______           \n");
+    printf("(  __  \\ |\\     /|( (    /|(  ____ \\(  ____ \\(  ___  )( (    /|  (  ____ \\(  ____ )(  ___  )(  ____ \\(  ____ \\  \n");
+    printf("| (  \\  )| )   ( ||  \\  ( || (    \\/| (    \\/| (   ) ||  \\  ( |  | (    \\/| (    )|| (   ) || (    \\/| (    \\/  \n");
+    printf("| |   ) || |   | ||   \\ | || |      | (__    | |   | ||   \\ | |  | (_____ | (____)|| (___) || |      | (__           \n");
+    printf("| |   | || |   | || (\\ \\) || | ____ |  __)   | |   | || (\\ \\) |  (_____  )|  _____)|  ___  || |      |  __)        \n");
+    printf("| |   ) || |   | || | \\   || | \\_  )| (      | |   | || | \\   |        ) || (      | (   ) || |      | (            \n");
+    printf("| (__/  )| (___) || )  \\  || (___) || (____/\\| (___) || )  \\  |  /\\____) || )      | )   ( || (____/\\| (____/\\   \n");
+    printf("(______/ (_______)|/    )_)(_______)(_______/(_______)|/    )_)  \\_______)|/       |/     \\|(_______/(_______/       \n");
+
+    usleep(1000000); // Espera por 1 segundo
+    
+    // Reproduz o tema dark da Intro
+    playDarkIntroTheme();
+
+    printf("\n\n\n\n\n\n");
+    printf("\t\t\t\tLoading...\n\n\n");
+    usleep(500000); // Espera por 0,5 segundos
+
+    printf("\t\t\t\t[    ]");
+    fflush(stdout);
+    usleep(500000); // Espera por 0,5 segundos
+
+    printf("\r\t\t\t\t[==  ]");
+    fflush(stdout);
+    usleep(500000); // Espera por 0,5 segundos
+
+    printf("\r\t\t\t\t[====]");
+    fflush(stdout);
+    usleep(500000); // Espera por 0,5 segundos
+
+    printf("\n\n\n\n\n");
+    printf("\t\t\t\tStart Game!\n\n");
+
+    return 0;
+}
