@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <windows.h> // Para reprodução de som no Windows
+#include <windows.h> // Para reproduÃ§Ã£o de som no Windows
 
-// Definição das notas musicais
+// DefiniÃ§Ã£o das notas musicais
 #define C 523
 #define D 587
 #define D_SHARP 622
@@ -11,24 +12,24 @@
 #define G_SHARP 830
 #define A_SHARP 932
 
-// Definição das durações das notas
+// DefiniÃ§Ã£o das duraÃ§Ãµes das notas
 #define HALF 500
 #define QUARTER 250
 #define EIGHTH 125
 #define SIXTEENTH 63
 
-// Função para reproduzir uma nota
+// FunÃ§Ã£o para reproduzir uma nota
 void playTone(int frequency, int duration) {
     Beep(frequency, duration);
 }
 
-// Função para reproduzir 
+// FunÃ§Ã£o para reproduzir 
 void playDarkIntroTheme() {
     // Notas do tema 
     int DarkIntroTheme[] = { D_SHARP, F_SHARP, G_SHARP, D_SHARP, A_SHARP, G_SHARP, F_SHARP, D_SHARP,
                               F_SHARP, G_SHARP, A_SHARP, F_SHARP, D_SHARP, G, F_SHARP, D_SHARP };
 
-    // Durações das notas correspondentes
+    // DuraÃ§Ãµes das notas correspondentes
     int NoteDurations[] = { EIGHTH, QUARTER, QUARTER, QUARTER, HALF, EIGHTH, QUARTER, QUARTER,
                             QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, HALF };
 
@@ -41,6 +42,7 @@ void playDarkIntroTheme() {
 }
 
 int main() {
+	system("color 06");
     printf(" ______            _        _______  _______  _______  _          _______  _______  _______  _______  _______           \n");
     printf("(  __  \\ |\\     /|( (    /|(  ____ \\(  ____ \\(  ___  )( (    /|  (  ____ \\(  ____ )(  ___  )(  ____ \\(  ____ \\  \n");
     printf("| (  \\  )| )   ( ||  \\  ( || (    \\/| (    \\/| (   ) ||  \\  ( |  | (    \\/| (    )|| (   ) || (    \\/| (    \\/  \n");
@@ -56,23 +58,23 @@ int main() {
     playDarkIntroTheme();
 
     printf("\n\n\n\n\n\n");
-    printf("\t\t\t\tLoading...\n\n\n");
+    printf("\t\t\t\t               Loading...\n\n\n");
     usleep(500000); // Espera por 0,5 segundos
 
-    printf("\t\t\t\t[    ]");
+    printf("\t\t\t\t\t\t[    ]");
     fflush(stdout);
     usleep(500000); // Espera por 0,5 segundos
 
-    printf("\r\t\t\t\t[==  ]");
+    printf("\r\t\t\t\t\t\t[==  ]");
     fflush(stdout);
     usleep(500000); // Espera por 0,5 segundos
 
-    printf("\r\t\t\t\t[====]");
+    printf("\r\t\t\t\t\t\t[====]");
     fflush(stdout);
     usleep(500000); // Espera por 0,5 segundos
 
     printf("\n\n\n\n\n");
-    printf("\t\t\t\tStart Game!\n\n");
+    printf("\t\t\t\t              Start Game!\n\n");
 
     return 0;
 }
