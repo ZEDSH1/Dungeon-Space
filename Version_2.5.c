@@ -272,62 +272,6 @@ void DRAW_MAP_2() {
 				}
 }
 
-void MOVE_MONSTER_1A() {
-	monster1A.direction = rand() % 4;
-	
-    switch (monster1A.direction) {
-        case 0: 
-        	if (map_2[monster1A.monster_y][monster1A.monster_x - 1] != '*' && map_2[monster1A.monster_y][monster1A.monster_x - 1] != '#' ) {
-                    monster1A.monster_x--;
-                }
-            break;
-        case 1: 
-        	if (map_2[monster1A.monster_y][monster1A.monster_x + 1] != '*' && map_2[monster1A.monster_y][monster1A.monster_x + 1] != '#' ) {
-        		    monster1A.monster_x++;
-			    }
-            break;
-        case 2: 
-            if (map_2[monster1A.monster_y - 1][monster1A.monster_x] != '*' && map_2[monster1A.monster_y - 1][monster1A.monster_x] != '#' ) {
-                    monster1A.monster_y--;
-                }
-            break;
-        case 3:
-        	if (map_2[monster1A.monster_y + 1][monster1A.monster_x] != '*' && map_2[monster1A.monster_y + 1][monster1A.monster_x] != '#'  ) {
-                    monster1A.monster_y++;
-                }
-            break;   
-    }
-
-}
-
-void MOVE_MONSTER_1B() {
-	monster1B.direction = rand() % 4;
-	
-    switch (monster1B.direction) {
-        case 0: 
-        	if (map_2[monster1B.monster_y][monster1B.monster_x - 1] != '*' && map_2[monster1B.monster_y][monster1B.monster_x - 1] != '#' ) {
-                    monster1B.monster_x--;
-                }
-            break;
-        case 1: 
-        	if (map_2[monster1B.monster_y][monster1B.monster_x + 1] != '*' && map_2[monster1B.monster_y][monster1B.monster_x + 1] != '#' ) {
-        		    monster1B.monster_x++;
-			    }
-            break;
-        case 2: 
-            if (map_2[monster1B.monster_y - 1][monster1B.monster_x] != '*' && map_2[monster1B.monster_y - 1][monster1B.monster_x] != '#' ) {
-                    monster1B.monster_y--;
-                }
-            break;
-        case 3:
-        	if (map_2[monster1B.monster_y + 1][monster1B.monster_x] != '*' && map_2[monster1B.monster_y + 1][monster1B.monster_x] != '#'  ) {
-                    monster1B.monster_y++;
-                }
-            break;   
-    }
-
-}
-
 void MAP_2() {
 	player_x = 1;
 	player_y = 1;
@@ -426,9 +370,58 @@ void MAP_2() {
                 	map_2[25][8] = ' ';
 					}								 
 				}
-		MOVE_MONSTER_1A();
-		MOVE_MONSTER_1B();
 		
+		//Primeiro monstro nivel 1				
+		monster1A.direction = rand() % 4;
+	
+    	switch (monster1A.direction) {
+        	case 0: 
+        		if (map_2[monster1A.monster_y][monster1A.monster_x - 1] != '*' && map_2[monster1A.monster_y][monster1A.monster_x - 1] != '#' ) {
+                    monster1A.monster_x--;
+                }
+            	break;
+        	case 1: 
+        		if (map_2[monster1A.monster_y][monster1A.monster_x + 1] != '*' && map_2[monster1A.monster_y][monster1A.monster_x + 1] != '#' ) {
+        		    monster1A.monster_x++;
+			    }
+            	break;
+        	case 2: 
+            	if (map_2[monster1A.monster_y - 1][monster1A.monster_x] != '*' && map_2[monster1A.monster_y - 1][monster1A.monster_x] != '#' ) {
+                    monster1A.monster_y--;
+                }
+            	break;
+        	case 3:
+        		if (map_2[monster1A.monster_y + 1][monster1A.monster_x] != '*' && map_2[monster1A.monster_y + 1][monster1A.monster_x] != '#'  ) {
+                    monster1A.monster_y++;
+                }
+            	break;   
+    		}
+    
+    	//Segundo monstro nivel 1    
+		monster1B.direction = rand() % 4;
+	
+    	switch (monster1B.direction) {
+        	case 0: 
+        		if (map_2[monster1B.monster_y][monster1B.monster_x - 1] != '*' && map_2[monster1B.monster_y][monster1B.monster_x - 1] != '#' ) {
+                    monster1B.monster_x--;
+                }
+           		break;
+        	case 1: 
+        		if (map_2[monster1B.monster_y][monster1B.monster_x + 1] != '*' && map_2[monster1B.monster_y][monster1B.monster_x + 1] != '#' ) {
+        		    monster1B.monster_x++;
+			    }
+            	break;
+        	case 2: 
+            	if (map_2[monster1B.monster_y - 1][monster1B.monster_x] != '*' && map_2[monster1B.monster_y - 1][monster1B.monster_x] != '#' ) {
+                    monster1B.monster_y--;
+                }
+            	break;
+        	case 3:
+        		if (map_2[monster1B.monster_y + 1][monster1B.monster_x] != '*' && map_2[monster1B.monster_y + 1][monster1B.monster_x] != '#'  ) {
+                    monster1B.monster_y++;
+                }
+            	break;   
+    		}		
 		if (player_x == monster1A.monster_x && player_y == monster1A.monster_y || player_x == monster1B.monster_x && player_y == monster1A.monster_y) vida--;
     }
 }
