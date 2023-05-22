@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <windows.h>
+
+// Função para tocar um beep com duração e frequência específicas
+void playBeep(int duration, int frequency) {
+    Beep(frequency, duration);
+}
+
+int main() {
+    // Sequência de notas e durações sombrias da música do mapa 2
+    int notes[] = { 220, 174, 196, 174, 220, 174, 196, 174, 220, 174, 196, 174, 220, 247, 294, 330, 415, 392, 330, 294, 247, 220, 174, 196, 174, 220, 174, 196, 174, 220, 174, 196, 174, 220, 247, 294, 330, 415, 392, 330, 294, 247, 220, 174, 196, 174 };
+    int durations[] = { 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400 };
+
+    // Calcula o tamanho da sequência de notas
+    int numNotes = sizeof(notes) / sizeof(notes[0]);
+
+    // Toca cada nota da sequência
+    for (int i = 0; i < numNotes; i++) {
+        playBeep(durations[i], notes[i]);
+        Sleep(50); // Intervalo entre as notas
+    }
+
+    return 0;
+}
