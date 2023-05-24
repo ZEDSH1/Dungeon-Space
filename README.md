@@ -1,13 +1,11 @@
 # Dungeon-Space
 
 # Descrição
-
 Dungeon Space é um jogo de aventura desenvolvido em linguagem C que desafia os jogadores a explorar três fases emocionantes em um ambiente de fantasia. Neste jogo, você assumirá o papel de um corajoso herói em busca de encontrar seu caminho de volta pra casa e desafios incríveis.
 
-
 # Características
-
 O jogo é do estilo aventura/puzzle onde o objetivo é o jogador conseguir passar de três fases. Em cada fase o jogador deve se movimentar para pegar uma chave para abrir a porta fechada.
+
 
 O jogador possui os seguintes comando:
 
@@ -43,6 +41,7 @@ m: Símbolo que representa o monstro nível 1. O mostro tem um movimento aleató
 
 M: Símbolo que representa o monstro nível 2. O mostro nível dois tem uma inteligência de se movimentar na direção do jogador. O    monstro não precisa saber desviar de obstáculos, ele sempre vai andar em linha reta em direção do jogador.
 
+
 O jogo possui um total de 8 telas:
 
 Menu Principal: Menu com com três escolhas para o usuário (Jogar, Tutorial, Sair);
@@ -70,9 +69,7 @@ Fase 2: Essa fase possui uma dimensão de 30x30 e possui os seguintes elementos:
    
 Fase 3: Essa fase possui uma dimensão de 60x60 e possui os seguintes elementos: todos da Fase 2, teletransporte e monstro nível 2.
 
-
 # Instruções de Uso
-
 Cone este repositório em sua máquina local ou vá em code e faça o Download Zip.
 
 git clone https://github.com/seu-usuario/dungeon-space.git 
@@ -86,7 +83,6 @@ Execute o jogo.
 ./dungeon_space 
 
 Siga as instruções fornecidas dentro do jogo para jogar e explorar as três fases.
-
 
 # Grupo
 Edgar Klewert
