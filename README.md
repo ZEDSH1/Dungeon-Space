@@ -24,7 +24,7 @@ O jogo possui os seguintes elementos nas fases:
 
 &: Símbolo que representa o jogador.
 
->: Símbolo que representa uma parede, o jogador ao se movimentar não pode passar pela parede.
+<>: Símbolo que representa uma parede, o jogador ao se movimentar não pode passar pela parede.
 
 @: Símbolo que representa a chave para abrir a porta para finalizar a fase, a porta abre no momento que o jogador interage com a chave.
 
