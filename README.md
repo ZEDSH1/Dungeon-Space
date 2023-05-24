@@ -71,7 +71,7 @@ Fase 3: Essa fase possui uma dimensão de 60x60 e possui os seguintes elementos:
 
 # Instruções de Uso
 
-Cone este repositório em sua máquina local.
+Cone este repositório em sua máquina local ou vá em code e faça o Download Zip.
 
 git clone https://github.com/seu-usuario/dungeon-space.git 
 
